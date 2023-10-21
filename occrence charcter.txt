@@ -1,0 +1,44 @@
+public class MyClass {
+    public static void main(String args[]) {
+        String s ="i am vijaj verma";
+        for(int i=0 ;i<s.length();i++)
+        if(s.charAt(i)!=' ')
+        {
+            int count=0;
+            boolean repat=false;
+            char ch = s.charAt(i);
+                for(int j=0;j<s.length();j++){
+                    if(j<i&&s.charAt(i)==s.charAt(j)){
+                        repat=true;
+                        break;
+                    }
+                    if(s.charAt(i)==s.charAt(j))
+                    count++;
+                }
+            if (repat==false)
+            System.out.println(ch+"= " + count);
+        }
+        
+    }
+}
+\\\\\\\
+using HashMap
+\\\
+import java.io.*;
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+        String s="i am vijay ";
+       HashMap<Character, Integer> hm = new HashMap<>();
+        for(int i= 0;i<s.length();i++){
+            char ch= s.charAt(i);
+            if(ch!=' ')
+            {
+                int val=hm.getOrDefault(ch,0);
+                val++;
+             hm.put(ch,val);   
+            }
+        }
+         System.out.print(hm);
+    }
+}
