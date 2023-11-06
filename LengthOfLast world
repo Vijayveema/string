@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class LengthOfLast {
+    public static void main(String args[]) {
+      Scanner sc= new Scanner(System.in);
+      System.out.println("enter the string ");
+      String s=sc.nextLine();
+      System.out.println(LengthOfLast(s));
+    }
+    public static int LengthOfLast(String s){
+        int count=0;
+        for(int i=s.length()-1;i>=0;i--){
+            if(s.charAt(i)!=' ')
+            count++;
+            else{
+                if(count>0)
+                break;
+            }
+        }
+        return count;
+    }
+}
